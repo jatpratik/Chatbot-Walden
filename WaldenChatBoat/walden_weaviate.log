@@ -1,0 +1,21 @@
+2025-04-21 11:53:34,468 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-21 11:53:34,471 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-21 11:53:34,471 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-21 11:53:38,459 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-21 11:53:38,459 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-21 11:53:38,789 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-21 11:53:38,791 - walden_weaviate - INFO - Creating schema class: WaldenContent
+2025-04-21 11:53:39,008 - walden_weaviate - INFO - Schema class WaldenContent created successfully
+2025-04-21 11:53:39,008 - walden_weaviate - INFO - Loaded 0 chunks from walden_data\rag_chunks.jsonl
+2025-04-21 11:53:39,011 - walden_weaviate - INFO - Successfully imported 0 out of 0 chunks
+2025-04-21 13:30:20,646 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-21 13:30:20,650 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-21 13:30:20,650 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-21 13:30:24,057 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-21 13:30:24,057 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-21 13:30:24,280 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-21 13:30:24,296 - walden_weaviate - INFO - Class WaldenContent already exists. Deleting it to recreate.
+2025-04-21 13:30:24,327 - walden_weaviate - INFO - Creating schema class: WaldenContent
+2025-04-21 13:30:24,544 - walden_weaviate - INFO - Schema class WaldenContent created successfully
+2025-04-21 13:30:24,663 - walden_weaviate - INFO - Loaded 4465 chunks from walden_data\rag_chunks.jsonl
+2025-04-21 13:36:52,415 - walden_weaviate - INFO - Successfully imported 4465 out of 4465 chunks
