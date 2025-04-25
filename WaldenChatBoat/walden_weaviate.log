@@ -19,3 +19,117 @@
 2025-04-21 13:30:24,544 - walden_weaviate - INFO - Schema class WaldenContent created successfully
 2025-04-21 13:30:24,663 - walden_weaviate - INFO - Loaded 4465 chunks from walden_data\rag_chunks.jsonl
 2025-04-21 13:36:52,415 - walden_weaviate - INFO - Successfully imported 4465 out of 4465 chunks
+2025-04-23 21:49:27,155 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-23 21:49:27,166 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-23 21:49:27,166 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-23 21:49:33,752 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-23 21:49:33,752 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-23 21:49:34,044 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-23 21:49:34,054 - walden_weaviate - INFO - Creating schema class: WaldenContent
+2025-04-23 21:49:34,285 - walden_weaviate - INFO - Schema class WaldenContent created successfully
+2025-04-23 21:49:34,340 - walden_weaviate - INFO - Loaded 6 chunks from walden_data\rag_chunks.jsonl
+2025-04-23 21:49:35,145 - walden_weaviate - INFO - Successfully imported 6 out of 6 chunks
+2025-04-24 14:51:22,431 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-24 14:51:22,435 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-24 14:51:22,435 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-24 14:51:26,540 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-24 14:51:26,540 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-24 14:51:55,882 - walden_weaviate - ERROR - Failed to connect to Weaviate: Weaviate did not start up in 5 seconds. Either the Weaviate URL http://localhost:8080 is wrong or Weaviate did not start up in the interval given in 'startup_period'.
+2025-04-24 15:33:20,015 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-24 15:33:20,019 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-24 15:33:20,019 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-24 15:33:22,915 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-24 15:33:22,916 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-24 15:33:23,080 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-24 15:33:23,083 - walden_weaviate - INFO - Creating schema class: WaldenContent
+2025-04-24 15:33:23,293 - walden_weaviate - INFO - Schema class WaldenContent created successfully
+2025-04-24 15:33:23,294 - walden_weaviate - INFO - Loaded 6 chunks from walden_data\rag_chunks.jsonl
+2025-04-24 15:33:23,892 - walden_weaviate - INFO - Successfully imported 6 out of 6 chunks
+2025-04-25 16:40:42,366 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-25 16:40:42,380 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-25 16:40:42,380 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-25 16:40:45,215 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-25 16:40:45,215 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-25 16:40:45,378 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-25 16:40:45,379 - walden_weaviate - INFO - Deleting all objects from class 'WaldenContent'
+2025-04-25 16:40:45,379 - walden_weaviate - ERROR - Failed to delete objects: 'where' must be of type dict. Given type: <class 'NoneType'>.
+2025-04-25 16:42:57,862 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-25 16:42:57,865 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-25 16:42:57,865 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-25 16:43:01,390 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-25 16:43:01,390 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-25 16:43:01,559 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-25 16:43:01,559 - walden_weaviate - INFO - Deleting all objects from class 'WaldenContent'
+2025-04-25 16:43:01,559 - walden_weaviate - ERROR - Failed to delete objects: 'value<TYPE>' field is either missing or incorrect: {'operator': 'IsNotNull', 'path': ['doc_id']}. Valid values are: {'valueBooleanArray', 'valueNumberArray', 'valueDate', 'valueGeoRange', 'valueText', 'valueInt', 'valueIntArray', 'valueNumber', 'valueString', 'valueTextArray', 'valueBoolean', 'valueStringArray'}.
+2025-04-25 16:47:56,284 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-25 16:47:56,288 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-25 16:47:56,288 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-25 16:47:59,021 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-25 16:47:59,021 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-25 16:47:59,198 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-25 16:47:59,199 - walden_weaviate - INFO - Attempting to delete class: WaldenContent
+2025-04-25 16:47:59,306 - walden_weaviate - INFO - Successfully deleted class WaldenContent
+2025-04-25 16:51:51,229 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-25 16:51:51,232 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-25 16:51:51,232 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-25 16:51:54,106 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-25 16:51:54,107 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-25 16:51:54,300 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-25 16:51:54,300 - walden_weaviate - INFO - Attempting to delete class: WaldenContent
+2025-04-25 16:51:54,458 - walden_weaviate - INFO - Successfully deleted class WaldenContent
+2025-04-25 16:51:54,466 - walden_weaviate - INFO - Class WaldenContent exists: False
+2025-04-25 16:51:54,466 - walden_weaviate - INFO - Database verification complete: Class does not exist
+2025-04-25 16:53:40,257 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-25 16:53:40,260 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-25 16:53:40,260 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-25 16:53:43,150 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-25 16:53:43,150 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-25 16:53:43,317 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-25 16:53:43,321 - walden_weaviate - INFO - Creating schema class: WaldenContent
+2025-04-25 16:53:43,569 - walden_weaviate - INFO - Schema class WaldenContent created successfully
+2025-04-25 16:53:43,571 - walden_weaviate - INFO - Loaded 9 chunks from walden_data\rag_chunks.jsonl
+2025-04-25 16:53:44,230 - walden_weaviate - INFO - Successfully imported 9 out of 9 chunks
+2025-04-25 19:28:41,458 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-25 19:28:41,466 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-25 19:28:41,467 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-25 19:28:44,426 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-25 19:28:44,426 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-25 19:28:44,605 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-25 19:28:44,605 - walden_weaviate - INFO - Attempting to delete class: WaldenContent
+2025-04-25 19:28:44,646 - walden_weaviate - INFO - Successfully deleted class WaldenContent
+2025-04-25 19:28:44,651 - walden_weaviate - INFO - Class WaldenContent exists: False
+2025-04-25 19:28:44,651 - walden_weaviate - INFO - Database verification complete: Class does not exist
+2025-04-25 19:29:19,215 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-25 19:29:19,218 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-25 19:29:19,218 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-25 19:29:22,012 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-25 19:29:22,013 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-25 19:29:22,224 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-25 19:29:22,227 - walden_weaviate - INFO - Creating schema class: WaldenContent
+2025-04-25 19:29:22,452 - walden_weaviate - INFO - Schema class WaldenContent created successfully
+2025-04-25 19:29:22,455 - walden_weaviate - INFO - Loaded 16 chunks from walden_data\rag_chunks.jsonl
+2025-04-25 19:29:23,175 - walden_weaviate - ERROR - Failed to add object: 'source'
+2025-04-25 19:29:23,237 - walden_weaviate - ERROR - Failed to add object: 'source'
+2025-04-25 19:29:23,291 - walden_weaviate - ERROR - Failed to add object: 'source'
+2025-04-25 19:29:23,353 - walden_weaviate - ERROR - Failed to add object: 'source'
+2025-04-25 19:29:23,527 - walden_weaviate - INFO - Successfully imported 12 out of 16 chunks
+2025-04-25 23:40:45,991 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-25 23:40:45,996 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-25 23:40:45,996 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-25 23:40:52,512 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-25 23:40:52,513 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-25 23:40:52,912 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-25 23:40:52,912 - walden_weaviate - INFO - Attempting to delete class: WaldenContent
+2025-04-25 23:40:53,131 - walden_weaviate - INFO - Successfully deleted class WaldenContent
+2025-04-25 23:40:53,140 - walden_weaviate - INFO - Class WaldenContent exists: False
+2025-04-25 23:40:53,141 - walden_weaviate - INFO - Database verification complete: Class does not exist
+2025-04-25 23:48:13,612 - walden_weaviate - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-25 23:48:13,616 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-25 23:48:13,616 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-25 23:48:19,239 - walden_weaviate - INFO - Embedding model loaded successfully
+2025-04-25 23:48:19,239 - walden_weaviate - INFO - Connecting to Weaviate at http://localhost:8080
+2025-04-25 23:48:19,435 - walden_weaviate - INFO - Successfully connected to Weaviate
+2025-04-25 23:48:19,445 - walden_weaviate - INFO - Creating schema class: WaldenContent
+2025-04-25 23:48:19,812 - walden_weaviate - INFO - Schema class WaldenContent created successfully
+2025-04-25 23:48:19,820 - walden_weaviate - INFO - Loaded 59 chunks from walden_data\rag_chunks.jsonl
+2025-04-25 23:48:23,816 - walden_weaviate - INFO - Successfully imported 59 out of 59 chunks

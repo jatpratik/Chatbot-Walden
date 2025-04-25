@@ -8,7 +8,7 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 import uuid
 import time
-from walden_rag import WaldenRAGChain
+from data_science_rag import WaldenRAGChain
 
 # Load environment variables
 load_dotenv()

@@ -243,6 +243,72 @@ class WaldenWeaviateDB:
             logger.error(f"Failed to get stats: {e}")
             return {"error": str(e)}
 
+    def delete_class(self):
+        """Delete the entire class from Weaviate"""
+        try:
+            logger.info(f"Attempting to delete class: {self.class_name}")
+            self.client.schema.delete_class(self.class_name)
+            logger.info(f"Successfully deleted class {self.class_name}")
+            return True
+        except Exception as e:
+            logger.error(f"Failed to delete class: {e}")
+            return False
+
+    def check_class_exists(self):
+        """Check if the class exists in the schema"""
+        try:
+            schema = self.client.schema.get()
+            classes = [cls['class'] for cls in schema['classes']] if 'classes' in schema else []
+            exists = self.class_name in classes
+            logger.info(f"Class {self.class_name} exists: {exists}")
+            return exists
+        except Exception as e:
+            logger.error(f"Error checking if class exists: {e}")
+            return False
+
+    def count_objects(self):
+        """Count the number of objects in the class"""
+        try:
+            if not self.check_class_exists():
+                logger.info(f"Class {self.class_name} doesn't exist, so there are 0 objects")
+                return 0
+
+            result = self.client.query.aggregate(self.class_name).with_meta_count().do()
+
+            if ("data" in result and "Aggregate" in result["data"] and
+                    self.class_name in result["data"]["Aggregate"] and
+                    len(result["data"]["Aggregate"][self.class_name]) > 0):
+                count = result["data"]["Aggregate"][self.class_name][0]["meta"]["count"]
+                logger.info(f"Found {count} objects in class {self.class_name}")
+                return count
+            else:
+                logger.info(f"No objects found in class {self.class_name}")
+                return 0
+        except Exception as e:
+            logger.error(f"Error counting objects: {e}")
+            return -1  # Return -1 to indicate an error occurred
+
+    def verify_db_empty(self):
+        """Verify that the database is empty (class doesn't exist or has no objects)"""
+        class_exists = self.check_class_exists()
+
+        if not class_exists:
+            logger.info("Database verification complete: Class does not exist")
+            return True
+
+        # If class exists, check if it contains any objects
+        object_count = self.count_objects()
+
+        if object_count == 0:
+            logger.info("Database verification complete: Class exists but contains no objects")
+            return True
+        elif object_count > 0:
+            logger.warning(f"Database is not empty: Found {object_count} objects")
+            return False
+        else:
+            logger.error("Failed to verify if database is empty")
+            return False
+
 
 def main():
     # Initialize the Weaviate DB handler
@@ -251,6 +317,24 @@ def main():
         weaviate_url="http://localhost:8080",  # Change to your Weaviate instance URL
         api_key=None  # Add API key if needed
     )
+
+    # # Delete the class
+    # print("Deleting class from Weaviate...")
+    # success = db.delete_class()
+    #
+    # if success:
+    #     print("Class deletion operation completed successfully")
+    #
+    #     # Verify the database is empty
+    #     is_empty = db.verify_db_empty()
+    #     if is_empty:
+    #         print("Confirmed: Database is now empty")
+    #     else:
+    #         print("Warning: Database may still contain data")
+    # else:
+    #     print("Failed to delete class")
+
+
 
     # Create schema
     print("Creating Weaviate schema...")
