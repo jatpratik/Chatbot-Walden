@@ -146,7 +146,7 @@ class WaldenRAGChain:
                 {
                     "context": lambda x: "\n\n".join(x["context"]),
                     "question": lambda x: x["question"],
-                    "chat_history": lambda x: self.format_chat_history(x.get("chat_history", []))
+                    "chat_history": lambda x: self.get_recent_chat_history(x.get("chat_history", []))
                 }
                 | QA_PROMPT
                 | self.llm
@@ -179,7 +179,7 @@ class WaldenRAGChain:
         self.fallback_chain = (
                 {
                     "question": lambda x: x["question"],
-                    "chat_history": lambda x: self.format_chat_history(x.get("chat_history", []))
+                    "chat_history": lambda x: self.get_recent_chat_history(x.get("chat_history", []))
                 }
                 | FALLBACK_PROMPT
                 | self.llm
@@ -271,6 +271,23 @@ class WaldenRAGChain:
         except Exception as e:
             logger.error(f"Context retrieval failed: {e}")
             return []
+
+    def get_recent_chat_history(self, messages, max_messages=4):
+        """Return only the most recent messages from chat history, limited to max_messages"""
+        if not messages or len(messages) == 0:
+            return "No previous conversation."
+
+        # Get only the most recent messages (up to max_messages)
+        recent_messages = messages[-max_messages:] if len(messages) > max_messages else messages
+
+        formatted_history = []
+        for msg in recent_messages:
+            if isinstance(msg, HumanMessage):
+                formatted_history.append(f"User: {msg.content}")
+            elif isinstance(msg, AIMessage):
+                formatted_history.append(f"Assistant: {msg.content}")
+
+        return "\n".join(formatted_history)
 
     def process_query(self, query, user_id="user", refine_answer=True):
         """Process a user query through the RAG pipeline"""
