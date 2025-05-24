@@ -17,7 +17,7 @@ logger = logging.getLogger('walden_weaviate')
 
 class WaldenWeaviateDB:
     def __init__(self, data_folder="walden_data",
-                 weaviate_url="http://localhost:8080",
+                 weaviate_url="http://localhost:8089",
                  api_key=None,
                  embedding_model="all-MiniLM-L6-v2"):
         self.data_folder = data_folder
@@ -314,7 +314,7 @@ def main():
     # Initialize the Weaviate DB handler
     db = WaldenWeaviateDB(
         data_folder="walden_data",
-        weaviate_url="http://localhost:8080",  # Change to your Weaviate instance URL
+        weaviate_url="http://localhost:8089",  # Change to your Weaviate instance URL
         api_key=None  # Add API key if needed
     )
 
