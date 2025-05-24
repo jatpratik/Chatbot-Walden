@@ -24,7 +24,7 @@ logger = logging.getLogger('walden_rag')
 
 class WaldenRAGChain:
     def __init__(self,
-                 weaviate_url="http://localhost:8089",
+                 weaviate_url="http://localhost:8088",
                  api_key=None,
                  embedding_model="all-MiniLM-L6-v2",
                  openai_api_key=None,
@@ -457,7 +457,7 @@ def main():
     openai_api_key = os.getenv("OPENAI_API_KEY")
 
     rag = WaldenRAGChain(
-        weaviate_url="http://localhost:8089",
+        weaviate_url="http://localhost:8088",
         openai_api_key=openai_api_key
     )
 

@@ -1,0 +1,10 @@
+__pycache__/
+node_modules/
+Lib/
+share/
+Scripts/
+.idea/*
+*.log
+*.tar
+*.zip
+*.sh

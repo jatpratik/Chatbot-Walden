@@ -25,7 +25,7 @@ docker-compose up -d
 2. Access the application:
    - Frontend: http://localhost:8501
    - API: http://localhost:8501/api
-   - Weaviate: http://localhost:8089
+   - Weaviate: http://localhost:8088
 
 ## Architecture
 

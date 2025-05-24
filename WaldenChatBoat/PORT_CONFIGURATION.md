@@ -41,7 +41,7 @@ After changing the ports, remember to update the README.md file to reflect the n
 2. Access the application:
    - Frontend: http://localhost:3000
    - API: http://localhost:3000/api
-   - Weaviate: http://localhost:8089
+   - Weaviate: http://localhost:8088
 ```
 
 ### 3. No Changes Needed in index.html
@@ -62,13 +62,13 @@ This means it will automatically work with any port number you set for the web s
 - Frontend: http://localhost:8501
 - API: http://localhost:8000
 - API through Nginx: http://localhost:8501/api
-- Weaviate: http://localhost:8089
+- Weaviate: http://localhost:8088
 
 ### Custom Configuration Example
 - Frontend: http://localhost:3000
 - API: http://localhost:9000
 - API through Nginx: http://localhost:3000/api
-- Weaviate: http://localhost:8089
+- Weaviate: http://localhost:8088
 
 ## Applying Changes
 

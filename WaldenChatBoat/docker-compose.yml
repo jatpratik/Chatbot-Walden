@@ -8,11 +8,13 @@ services:
       - "9000:8000"
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - WEAVIATE_URL=http://host.docker.internal:8089
+      - WEAVIATE_URL=http://weaviate:8080
     volumes:
       - ./.env:/app/.env
     restart: unless-stopped
-    
+    depends_on:
+      - weaviate
+
   web:
     image: nginx:alpine
     container_name: walden_web
@@ -24,3 +26,19 @@ services:
     depends_on:
       - walden_api
     restart: unless-stopped
+
+  weaviate:
+    image: semitechnologies/weaviate:1.24.1
+    ports:
+      - "8088:8080"
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      CLUSTER_HOSTNAME: 'node1'
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+
+volumes:
+  weaviate_data:
