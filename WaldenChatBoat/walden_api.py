@@ -64,7 +64,7 @@ def get_rag_chain():
                 raise ValueError("OpenAI API key not found")
 
             # Get Weaviate URL from environment or use default
-            weaviate_url = os.getenv("WEAVIATE_URL", "http://host.docker.internal:8089")
+            weaviate_url = "http://weaviate:8080"
             
             # Initialize RAG chain
             rag_chain = WaldenRAGChain(
