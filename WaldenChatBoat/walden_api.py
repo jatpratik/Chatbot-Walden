@@ -63,12 +63,15 @@ def get_rag_chain():
             if not openai_api_key:
                 raise ValueError("OpenAI API key not found")
 
+            # Get Weaviate URL from environment or use default
+            weaviate_url = os.getenv("WEAVIATE_URL", "http://weaviate:8080")
+            
             # Initialize RAG chain
             rag_chain = WaldenRAGChain(
-                weaviate_url="http://localhost:8080",
+                weaviate_url=weaviate_url,
                 openai_api_key=openai_api_key
             )
-            logger.info("RAG chain initialized successfully")
+            logger.info(f"RAG chain initialized successfully with Weaviate URL: {weaviate_url}")
         except Exception as e:
             logger.error(f"Failed to initialize RAG chain: {e}")
             raise HTTPException(status_code=500, detail=f"Failed to initialize RAG chain: {str(e)}")

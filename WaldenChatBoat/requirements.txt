@@ -1,0 +1,6 @@
+langchain-community
+langchain-openai
+fastapi
+uvicorn
+weaviate-client==3.25.2
+sentence-transformers
